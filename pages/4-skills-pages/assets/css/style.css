@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/bg-projects.gif);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, rgb(200, 249, 255), rgb(255, 255, 255));
+  height: 550px;
+  width: 300px;
+  border-radius: 20px;
+  margin: 145px auto; /* add this line to center the container horizontally */
+  padding: 20px;
+  margin-left: 800px;
+  font-family: "poppins";
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background-image: linear-gradient(to left, rgb(0, 255, 255),  rgb(146, 12, 255), rgb(209, 10, 166),  rgb(255, 43, 43),  rgb(255, 196, 0));
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  color: white;
+}
+
+.circle img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%;
+  }
+  .nav ul {
+      flex-direction: column;
+  }
+  .nav li {
+      margin-right: 0;
+  }
+  .nav li + li {
+      margin-top: 10px;
+  }
+  .main {
+      flex-direction: column;
+  }
+  .card {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      max-width: 95%;
+  }
+  .nav {
+      padding: 10px 0;
+  }
+  .nav ul {
+      padding: 0 10px;
+  }
+  .card {
+      padding: 15px;
+  }
+  .card button {
+      padding: 10px 15px;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 255px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0f0020;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: "Poppins";
+}
+
+/* Responsive design for sidebar */
+@media (max-width: 1200px) {
+  .sidenav {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidenav {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidenav {
+    width: 80px;
+  }
+}
+
+.sidenav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidenav-toggle {
+    display: block;
+  }
+  .sidenav {
+    width: 0;
+    overflow-x: hidden;
+  }
+  .sidenav.open {
+    width: 100px;
+    overflow-x: visible;
+  }
+}
+
+.sidenav-image {
+  background-image: url(../img/kln-kreates-logo-1.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  height: 100px;
+  width: 180px;
+  margin-left: 37px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.sidenav a {
+  padding: 6px 6px 18px 42px;
+  padding-right: 9px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff006a;
+  display: block;
+}
+
+.sidenav b {
+  padding: 6px 6px 18px 42px;
+  padding-right: 9px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff006a;
+  display: block;
+}
+.sidenav a:hover {
+  color: #ffb1d6;
+  font-weight: 700;
+}
+
+.sidenav-footer {
+  color: #ffb1d6;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 435px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; }
+}

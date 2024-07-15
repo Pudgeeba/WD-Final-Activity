@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url(../img/bg-projects.gif);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 2200px; /* increased from 1900px */
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #0f00206c;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-image: linear-gradient(to left, rgb(0, 255, 255),  rgba(146, 12, 255, 0.633), rgb(209, 10, 166),  rgb(255, 43, 43),  rgb(255, 196, 0));
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-family: "poppins";
+}
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(33.33% - 30px);
+  height: 395px;
+  margin: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 15px 0px 10px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  width: calc(33.33% - 30px);
+  margin: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow:1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(255, 0, 119), 0 0 5px rgb(255, 123, 167);
+  padding: 20px;
+  border-radius: 15px 0px 10px 0;
+  transform: scale(1.02);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px; /* adjust the height to your liking */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 15px 0px 10px 0;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: "poppins";
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #0f0020;
+  color: #fff;
+  border: none;
+  padding: 6px 20px;
+  font-size: 16px;
+  font-family: "poppins";
+  cursor: pointer;
+  margin-bottom: 40px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card button:hover {
+  background-color: #ff2768;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%;
+  }
+  .nav ul {
+      flex-direction: column;
+  }
+  .nav li {
+      margin-right: 0;
+  }
+  .nav li + li {
+      margin-top: 10px;
+  }
+  .main {
+      flex-direction: column;
+  }
+  .card {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      max-width: 95%;
+  }
+  .nav {
+      padding: 10px 0;
+  }
+  .nav ul {
+      padding: 0 10px;
+  }
+  .card {
+      padding: 15px;
+  }
+  .card button {
+      padding: 10px 15px;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 255px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0f0020;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: "Poppins";
+}
+
+/* Responsive design for sidebar */
+@media (max-width: 1200px) {
+  .sidenav {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidenav {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidenav {
+    width: 80px;
+  }
+}
+
+.sidenav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidenav-toggle {
+    display: block;
+  }
+  .sidenav {
+    width: 0;
+    overflow-x: hidden;
+  }
+  .sidenav.open {
+    width: 100px;
+    overflow-x: visible;
+  }
+}
+
+.sidenav-image {
+  background-image: url(../img/kln-kreates-logo-1.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  height: 100px;
+  width: 180px;
+  margin-left: 37px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.sidenav a {
+  padding: 6px 6px 18px 42px;
+  padding-right: 9px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff006a;
+  display: block;
+}
+
+.sidenav b {
+  padding: 6px 6px 18px 42px;
+  padding-right: 9px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff006a;
+  display: block;
+}
+.sidenav a:hover {
+  color: #ffb1d6;
+  font-weight: 700;
+}
+
+.sidenav-footer {
+  color: #ffb1d6;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 435px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  
+}
+
+.social-icons a:hover {
+  color: #93c795;
+}
